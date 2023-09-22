@@ -7,7 +7,7 @@ LABEL Description="The NSQ Admin front web with Nginx"
 ENV AUTH_BASIC_REALM="NSQ Admin Auth" \
 NSQ_ADMIN_USER=nsqadmin \
 NSQ_ADMIN_PASSWD=nsqadmin \
-NSQ_PASSWD_FILE=/opt/nsqadmin/passwd \  
+NSQ_PASSWD_FILE=/opt/nsqadmin/passwd \
 NSQ_PROXY_ADDR=http://0.0.0.0:4171
 
 RUN mkdir -p /etc/nginx/templates
