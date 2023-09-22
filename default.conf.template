@@ -1,0 +1,11 @@
+server {
+    listen [::]:80 default_server;
+    listen 80 default_server;
+    server_name _;
+    index index.html;
+    root /opt/nsqadmin;
+    auth_basic "${AUTH_BASIC_REALM}"; 
+    auth_basic_user_file ${NSQ_PASSWD_FILE};
+    location /{proxy_pass ${NSQ_PROXY_ADDR};}
+    include /etc/nginx/mime.types;
+}

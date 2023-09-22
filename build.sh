@@ -1,0 +1,1 @@
+docker buildx build -t billcoding/nsqadmin-nginx -f Dockerfile --platform "linux/amd64" --push .
